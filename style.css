@@ -51,6 +51,7 @@ nav ul li a:hover {
 
 .navforms input {
   background-color: #34495e;
+  border: 3px solid #424949;
   color: #f2f3f4;
   height: 30px;
   outline: none;
