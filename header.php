@@ -8,4 +8,27 @@
 </head>
 
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <a href="">
+                <img src="image/logo.jpeg" alt="">
+            </a>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+            <div>
+                <form action="includes/login.inc.php" method="post">
+                    <input type="text" name="mailuid" placeholder="Username or Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit" name="login-submit">Login</button>
+                </form>
+                <a href="signup.php">Signup</a>
+                <form action="includes/logout.inc.php" method="post">
+                    <button type="submit" name="logout-submit">Logout</button>
+                </form>
+            </div>
+        </nav>
+    </header>
