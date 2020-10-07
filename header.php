@@ -26,7 +26,7 @@
                     <input type="password" name="password" placeholder="Password" autocomplete="off">
                     <button class="mybutton" type="submit" name="login-submit">Login</button>
                 </form>
-                <button class="mybutton" href="signup.php">Signup</button>
+                <a class="mybutton" id="signuplink" href="signup.php">Signup</a>
                 <form class="logout-form" action="includes/logout.inc.php" method="post">
                     <button class="mybutton" type="submit" name="logout-submit">Logout</button>
                 </form>
