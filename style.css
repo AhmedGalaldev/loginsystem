@@ -1,88 +1,86 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
-  padding: 0;
+  padding: 0px;
+  margin: 0px;
 }
 nav {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  background-color: #7f8c8d;
+  margin: 0px;
+  padding: 0px;
+  height: 65px;
 }
-ul {
-  list-style-type: none;
-}
-li {
+nav img {
   float: left;
+  margin-left: 20px;
+  margin-top: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
 }
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+nav ul {
+  float: left;
+  list-style: none;
+}
+nav ul li {
+  display: inline;
+  margin: 10px;
+}
+nav ul li a {
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 1000;
+  color: rgb(29, 29, 59);
 }
-
-li a:hover {
-  background-color: #111;
+nav ul li a:hover {
+  color: rgb(30, 47, 85);
 }
-
-.forms {
+.navforms {
   float: right;
   margin: 15px;
 }
-.forms form {
+.navforms .login-form {
+  display: inline;
+}
+.navforms .logout-form {
   display: inline;
 }
 
-.forms form input {
-  font-size: 16px;
-  border-width: 2px;
-  border-color: #e7d8d8;
-  background-color: #dce9ec;
-  color: #fdf5f5;
-  border-style: solid;
-  border-radius: 7px;
-  box-shadow: 0px 0px 5px rgba(134, 107, 107, 0.75);
-}
-.forms form input :focus {
+.navforms input {
+  background-color: #34495e;
+  color: #f2f3f4;
+  height: 30px;
   outline: none;
+  border-radius: 10px;
+  padding: 10px;
 }
-
-.logo {
-  float: left;
-  width: 40px;
-  height: 40px;
-  border-radius: 20px 20px 20px 20px;
-  padding: 14px 16px;
+input::placeholder {
+  color: #f4f6f7ed;
+}
+.navforms input:focus {
+  border: 2px solid #f8f9f9;
 }
 
 .mybutton {
-  box-shadow: 0px 10px 14px -7px #62696b;
-  background: linear-gradient(to bottom, #62696b 5%, #62696b 100%);
-  background-color: #62696b;
-  border-radius: 5px;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 15px;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #f4f6f7ed;
+  font-size: 16px;
+  margin-right: 10px;
+  background-color: #34495e;
+  color: #f4f6f7ed;
   font-weight: bold;
-  padding: 7px 20px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #e7f2f6;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  cursor: pointer;
 }
 .mybutton:hover {
-  background: linear-gradient(to bottom, #5b6466 5%, #5b6466 100%);
-  background-color: #5b6466;
-}
-.mybutton:active {
-  position: relative;
-  top: 1px;
+  background-color: #99a3a4;
 }
 
-main {
+.main-index {
   text-align: center;
-  background-color: rgb(238, 235, 229);
-  margin: 0px 200px;
+  margin: auto;
+  width: 1000px;
+  background-color: #d7dbdd;
 }
