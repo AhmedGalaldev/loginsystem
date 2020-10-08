@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,15 +25,22 @@
                 <li><a href="">Contacts</a></li>
             </ul>
             <div class="navforms">
-                <form class="login-form" action="includes/login.inc.php" method="post">
-                    <input type="text" name="mailuid" placeholder="Username or Email" autocomplete="off">
-                    <input type="password" name="password" placeholder="Password" autocomplete="off">
-                    <button class="mybutton" type="submit" name="login-submit">Login</button>
-                </form>
-                <a class="mybutton" id="signuplink" href="signup.php">Signup</a>
-                <form class="logout-form" action="includes/logout.inc.php" method="post">
-                    <button class="mybutton" type="submit" name="logout-submit">Logout</button>
-                </form>
+                <?php
+                if (isset($_SESSION['username'])) {
+                    echo '<form class="logout-form" action="includes/logout.inc.php" method="post">
+                             <button class="mybutton" type="submit" name="logout-submit">Logout</button>
+                         </form>';
+                } else {
+                    echo '  <form class="login-form" action="includes/login.inc.php" method="post">
+                                <input type="text" name="mailuid" placeholder="Username or Email" autocomplete="off">
+                                <input type="password" name="password" placeholder="Password" autocomplete="off">
+                                <button class="mybutton" type="submit" name="login-submit">Login</button>
+                                </form>
+                            <a class="mybutton" id="signuplink" href="signup.php">Signup</a>';
+                }
+                ?>
+
+
             </div>
         </nav>
     </header>

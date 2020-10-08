@@ -4,8 +4,15 @@ require 'header.php';
 
 <main>
     <section class="main-index">
-        <p>You are logged out!</p>
-        <p>You are logged in!</p>
+        <?php
+        if (isset($_SESSION['username'])) {
+            echo "<h2>You are logged in!</h2>";
+        } else {
+            echo "<h2>You are logged out!</h2>";
+        }
+        ?>
+
+
     </section>
 
 </main>
