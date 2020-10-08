@@ -20,7 +20,7 @@ require 'header.php';
                 echo "<p class='error'>InValid username</p>";
             } elseif ($_GET['error'] == "passworddontmatch") {
                 echo "<p class='error'>Password Don't match</p>";
-            } elseif ($GET['error'] == "usertoken") {
+            } elseif ($_GET['error'] == "usertoken") {
                 echo "<p class='error'>User Token</p>";
             }
         } elseif ($_GET['signup'] == "success") {
