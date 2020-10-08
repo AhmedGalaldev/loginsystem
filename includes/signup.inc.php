@@ -26,7 +26,7 @@ if (isset($_POST['signup-submit'])) {
         exit();
     } else {
 
-        $sql = "SELECT username From users WHERE username=?";
+        $sql = "SELECT * From users WHERE username=?";
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -38,7 +38,8 @@ if (isset($_POST['signup-submit'])) {
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
 
-            if ($resultCheck > 1) {
+            if ($resultCheck > 0) {
+
                 header("Location: ../signup.php?error=usertoken&email=" . $email);
                 exit();
             } else {
