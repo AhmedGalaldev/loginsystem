@@ -23,8 +23,11 @@ require 'header.php';
             } elseif ($_GET['error'] == "usertoken") {
                 echo "<p class='error'>User Token</p>";
             }
-        } elseif ($_GET['signup'] == "success") {
-            echo "<p class='success'>Register Successfully</p>";
+        } elseif (isset($_GET['signup'])) {
+            if ($_GET['signup'] === 'success') {
+
+                echo "<p class='success'>Register Successfully</p>";
+            }
         }
         ?>
         <form action="includes/signup.inc.php" method="POST">

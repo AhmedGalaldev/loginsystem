@@ -38,7 +38,7 @@ if (isset($_POST['signup-submit'])) {
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
 
-            if ($resultCheck > 0) {
+            if ($resultCheck > 1) {
                 header("Location: ../signup.php?error=usertoken&email=" . $email);
                 exit();
             } else {
